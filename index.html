@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/wrike.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+.reveal .solid {
+  width: 2ex;
+  display:inline-block;
+  text-align:center;
+  font-weight: 400;
+}
+      .reveal li {
+        margin-bottom: .3em;
+      }
+      .reveal pre.opacity * {
+        color: rgba(255,255,255, 0.3) !important;
+      }
+      .reveal .tag {
+        width: 12ex;
+        display:inline-block;
+        float: left;
+        font-weight:500;
+      }
+
+      .reveal pre.opacity mark,
+      .reveal pre.opacity mark * {
+        color: rgba(255,255,255, 1) !important;
+        background-color:transparent;
+      }
+
+      .reveal .slides section .fragment.mark {
+        opacity: 1;
+        visibility: visible;
+      }
+      .reveal .slides section .fragment.mark.current-fragment,
+      .reveal .slides section .fragment.mark.current-fragment *,
+      .reveal mark,
+      .reveal mark * {
+        color: #fff!important;
+        background-color: #000!important;
+      }
+
+      .reveal ul.solid-ul li {
+        list-style:none;
+      }
+
+      .hidden {
+        visibility:hidden;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-transition="slide none">
+          <h1>
+            Лайфхаки во фронтенд разработке
+          </h1>
+          <p>Алексей Золотых</p>
+        </section>
+        <section data-transition="none">
+          <h1>
+            <strike>
+              Лайфхаки во фронтенд разработке
+            </strike>
+          </h1>
+          <p>Алексей Золотых</p>
+        </section>
+        <section data-transition="none slide">
+          <h1>
+            Лайфхаки
+          </h1>
+          <p>Алексей Золотых</p>
+        </section>
+        <section>
+          <img src="img/bashorg.png" alt="">
+        </section>
+        <section>
+          <p>
+            <a href="https://bash.im/quote/436725">bash.im/quote/436725</a>
+          </p>
+        </section>
+        <section>
+          Сборник мыслей
+        </section>
+        <section>
+          <h1>
+            0. Метрики  &mdash;  наше все
+          </h1>
+        </section>
+        <section>
+          <p>
+          <a href="https://wakatime.com">wakatime.com</a>
+          </p>
+        </section>
+        <section>
+          <img src="img/projects.svg" alt="">
+        </section>
+        <section>
+          <img src="img/langs.svg" alt="">
+        </section>
+        <section>
+          <h1>
+            1. Слишком много информации
+          </h1>
+        </section>
+        <section>
+          X in Y
+          <p class="fragment">
+          <a href="https://learnxinyminutes.com">learnxinyminutes.com</a></p>
+        </section>
+        <section>
+          <img src="img/haskell.png" alt="">
+        </section>
+        <section>
+          <p>
+            Как работает foldr в  haskell
+          </p>
+          <pre><code class="haskell">
+-- foldl is left-handed, foldr is right-handed
+foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
+          </code></pre>
+        </section>
+        <section>
+          Awesome
+          <p class="fragment">
+            awesome + <то, что я изучаю>
+          </p>
+        </section>
+        <section>
+          <img src="img/dart.png" alt="">
+        </section>
+        <section>
+          <p>Лист листов</p>
+          <a href="https://awesomelists.top">awesomelists.top</a>
+        </section>
+        <section>
+          <img src="img/haskell2.png" alt="">
+        </section>
+        <section>
+          <p>Найди мне такое же, только бесплатно</p>
+          <a href="alternativeto.net">alternativeto.net</a>
+        </section>
+        <section>
+          <img src="img/gitlab.svg" style="width: 10vw" alt="">
+          <br>
+          <ul>
+            <li class="fragment">Gogs <a href="https://gogs.io">gogs.io</a></li>
+            <li class="fragment">Gitea <a href="https://gitea.io">gitea.io</a></li>
+            <li class="fragment">Gitbucket <a href="https://gitbucket.github.io">gitbucket.github.io</a></li>
+            <li class="fragment">Girprep <a href="http://gitprep.yukikimoto.com">gitprep.yukikimoto.com</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>3. Затачивайте пилу</h1>
+          </section>
+          <section>
+            Мой WebStorm
+            <img src="img/ide.png" alt="">
+          </section>
+          <section>
+            Все тоже самое в консоли
+          </section>
+          <section>
+            <img src="img/z1.svg"  width="100%" style="margin: 0" alt="">
+          </section>
+          <section>
+            <img src="img/z3.svg"  width="100%" style="margin: 0" alt="">
+          </section>
+        </section>
+        <section>
+          Как работаю я
+          <p class="fragment">Я люблю консоль</p>
+        </section>
+        <section>
+          <p>Клавиатурные сочетания</p>
+          <ul>
+            <li class="fragment">Tab</li>
+            <li class="fragment">Ctrl + R</li>
+            <li class="fragment">Ctrl + X, Ctrl + E</li>
+          </ul>
+        </section>
+        <section>
+          <p>Любимые утилиты</p>
+          <ul>
+            <li class="fragment">ohmyzsh</li>
+            <li class="fragment">z</li>
+            <li class="fragment">fzf</li>
+            <li class="fragment">gnu parallel</li>
+            <li class="fragment">ripgrep</li>
+            <li class="fragment">git</li>
+          </ul>
+
+        </section>
+        <section>
+          <p>Тема</p>
+          <img src="img/ohmyzsh.png" alt="">
+        </section>
+        <section>
+          <p>Z</p>
+          <p><a href="https://github.com/rupa/z">github.com/rupa/z</a></p>
+        </section>
+        <section>
+          <pre><code class="bash" data-trim>
+            z builder # cd /Users/zolotyh/grinder_tasks_builder
+          </code></pre>
+        </section>
+        <section>
+          <pre><code class="bash" data-trim>
+            z # + enter?
+          </code></pre>
+        </section>
+        <section>
+          <p>FZF - нечеткий поиск в Unix стиле</p>
+        </section>
+        <section>
+          <p><a href="https://explainshell.com">explainshell.com</a></p>
+        </section>
+        <section>
+          <img src="img/gitb4.png" alt="">
+        </section>
+        <section>
+          <img src="img/ln.svg" width="100%" style="margin: 0" alt="">
+        </section>
+        <section>
+          <p>tldr</p>
+          <pre><code>npm install -g tldr</code></pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        width: 1280,
+        height: 1024,
+        progress: true,
+        slideNumber: true,
+        history: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
