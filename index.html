@@ -113,6 +113,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
           </p>
         </section>
         <section>
+          <img src="img/waka2.png" alt="">
+        </section>
+        <section>
           <img src="img/projects.svg" alt="">
         </section>
         <section>
@@ -190,15 +193,25 @@ foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
           </section>
         </section>
         <section>
-          Как работаю я
-          <p class="fragment">Я люблю консоль</p>
+          Использую
+          <p class="fragment">Консоль</p>
+          <p class="fragment">IDE, когда нужно работать только с одним проектом</p>
         </section>
         <section>
           <p>Клавиатурные сочетания</p>
           <ul>
             <li class="fragment">Tab</li>
             <li class="fragment">Ctrl + R</li>
-            <li class="fragment">Ctrl + X, Ctrl + E</li>
+            <li class="fragment">
+              Ctrl + X, Ctrl + E
+              <pre><code data-trim>
+  export EDITOR='subl -w'
+  export VISUAL='subl -w'
+              </code></pre>
+            </li>
+            <li class="fragment">
+              Ctrl + A / Ctrl + E
+            </li>
           </ul>
         </section>
         <section>
@@ -208,31 +221,111 @@ foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
             <li class="fragment">z</li>
             <li class="fragment">fzf</li>
             <li class="fragment">gnu parallel</li>
-            <li class="fragment">ripgrep</li>
             <li class="fragment">git</li>
           </ul>
-
         </section>
         <section>
-          <p>Тема</p>
+          <h1>ohmyzsh</h1>
           <img src="img/ohmyzsh.png" alt="">
         </section>
         <section>
-          <p>Z</p>
+          <p>z</p>
           <p><a href="https://github.com/rupa/z">github.com/rupa/z</a></p>
         </section>
         <section>
+          <p>FZF &mdash; нечеткий поиск в Unix стиле</p>
+        </section>
+        <section>
+          <p>
+            Gnu Parallel &mdash; паралельность из коробки
+          </p>
+        </section>
+        <section>
           <pre><code class="bash" data-trim>
-            z builder # cd /Users/zolotyh/grinder_tasks_builder
+# Сделать git pull всем подпапкам
+for d in `ls -d */` ; do (cd "$d" && git pull); done
           </code></pre>
         </section>
         <section>
           <pre><code class="bash" data-trim>
-            z # + enter?
+          # Сделать git pull всем подпапкам
+          ls -d */ | parallel 'git -C {} pull'
+</code></pre>
+        </section>
+        <section>
+          <img src="img/devtool.png" alt="">
+        </section>
+        <section>
+          <img src="img/devtool2.png" alt="">
+        </section>
+        <section>
+          <pre><code>seq 1000 |  parallel 'curl ...'</code></pre>
+        </section>
+        <section>
+          <h2>Git</h2>
+        </section>
+        <section>
+          <img src="img/gitignode.png" alt="">
+        </section>
+        <section>
+          <pre><code data-trim>
+#~/.gitconfig
+[alias]
+  ignore = "!gi() { 
+    curl -L -s https://www.gitignore.io/api/$@ ;
+  }; gi"
           </code></pre>
         </section>
         <section>
-          <p>FZF - нечеткий поиск в Unix стиле</p>
+          <pre><code data-trim class="1c">
+[mergetool "intellij"]
+  cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm merge \
+  $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") \
+  $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") \
+  $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") \
+  $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED") \
+  && read -n 1 -s
+          </code></pre>
+        </section>
+        <section>
+          <pre><code  data-trim data-noescape class="1c">
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+          </code></pre>
+        </section>
+        <section>
+<pre><code class="1c" data-trim>
+[merge]
+  tool = intellij
+</code></pre>
+        </section>
+        <section>
+          <pre><code class="bash" data-noescape data-trim>
+          #  Когда есть конфликт
+          git mergetool
+          </code></pre>
+        </section>
+        <section>
+          <pre><code class="bash" data-trim>
+# разрезолвить все  конфликты в подпапках
+for d in `ls -d */` ; do (cd "$d" && git mergetool); done
+          </code></pre>
+        </section>
+        <section>
+          <p>Git standup 
+          </p>
+          <p>
+          <a href="https://github.com/kamranahmedse/git-standup">github.com/kamranahmedse/git-standup</a>
+          </p>
+        </section>
+        <section>
+          <pre><code class="bash" data-trim>git-standup -d 3</code></pre>
+        </section>
+        <section>
+          <img src="img/standup.svg" width="100%" alt="">
+        </section>
+        <section>
+          <pre><code class="bash" data-trim>git-standup -d 3 | pbcopy</code></pre>
         </section>
         <section>
           <p><a href="https://explainshell.com">explainshell.com</a></p>
