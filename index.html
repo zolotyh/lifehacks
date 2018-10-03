@@ -237,6 +237,14 @@ foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
         </section>
         <section>
           <p>
+            Список рецептов на все случаи жизни
+          </p>
+          <p>
+          <a href="https://github.com/junegunn/fzf/wiki/examples">github.com/junegunn/fzf/wiki/examples</a>
+          </p>
+        </section>
+        <section>
+          <p>
             Gnu Parallel &mdash; паралельность из коробки
           </p>
         </section>
@@ -340,9 +348,137 @@ for d in `ls -d */` ; do (cd "$d" && git mergetool); done
           <p>tldr</p>
           <pre><code>npm install -g tldr</code></pre>
         </section>
+        <section>
+          <h1>4. Поиск занимает слишком много времени</h1>
+        </section>
+        <section>
+          <img style="height: 100%; margin: 0" src="img/1.jpg" alt="">
+        </section>
+        <section data-background="img/run.jpg">
+        </section>
+        <section data-background="img/run2.png">
+        </section>
+        <section>
+          <p>Alfred</p>
+          <img src="img/alfred.png" alt="">
+        </section>
+        <section>
+          <p>Alfred</p>
+          <img src="img/alfred2.png" alt="">
+        </section>
+        <section>
+          <p>Spotlight</p>
+          <img src="img/spotlight.png" alt="">
+        </section>
+        <section>
+          <p>Почему я все еще пользуюсь Alfred?</p>
+        </section>
+        <section>
+          <p>Для Windows есть Wox</p>
+          <p><a href="http://www.wox.one">www.wox.one</a></p>
+        </section>
+        <section>
+          <h1>5. Стандарты и нестандартные решения</h1>
+        </section>
+        <section>
+          <p>
+            Docker
+          </p>
+        </section>
+        <section>
+          <pre><code data-trim class="docker-compose" style="font-size: .6em">
+version: '3.3'
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     environment: ...
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     volumes:
+       - ./themes:/var/www/html/wp-content/themes
+     environment: ...
+volumes:
+    db_data:
+          </code></pre>
+        </section>
+        <section>
+          <p>autosave</p>
+            <p>
+          <a href="https://chrome.google.com/webstore/detail/devtools-autosave/mlejngncgiocofkcbnnpaieapabmanfl?hl=en">https://tinyurl.com/q8x7mcj</a>
+            </p>
+        </section>
+        <section>
+          <p><a href="http://serveo.net/#self-host">serveo.net</a></p>
+          <pre><code>
+          ssh -R 80:localhost:3000 serveo.net
+          </code></pre>
+        </section>
+        <section>
+          <ul>
+            <li><a href="https://localtunnel.github.io/www/">localtunnel.github.io/www/</a></li>
+            <li><a href="https://ngrok.com">ngrok.com</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>5. Построй свой процесс</h1>
+        </section>
+        <section>
+          <p>
+          Zapier
+          </p>
+          <img src="img/zapier1.png" alt="">
+        </section>
+        <section>
+          <p>
+            Zap
+          </p>
+          <img src="img/zapier2.png" alt="">
+        </section>
+        <section>
+          <p>
+          Webhook 2 Slack
+          </p>
+          <img src="img/zapier3.png" alt="">
+        </section>
+        <section>
+          <p>Отправляем standup в Slack</p>
+          <pre><code class="bash"  style="font-size:0.8em" data-trim >
+            export a=$(sh -c 'cd ~/all2/ && git-standup -d 3');
+            http \
+              https://hooks.zapier.com/hooks/catch/!!l/!!p/ \
+              message=\"$a\"
+          </code></pre>
+        </section>
+        <section>
+          <img src="img/slack.png" alt="">
+        </section>
+        <section>
+          <p><a href="https://httpie.org">httpie.org</a></p>
+        </section>
+        <section>
+          <p>Автоматизаторы процесса</p>
+          <ul>
+            <li class="fragment">IFTTT <a href="https://ifttt.com">https://ifttt.com</a></li>
+            <li class="fragment">Zapier <a href="https://zapier.com/app/home">zapier.com/app/home</a></li>
+            <li class="fragment">Beehive <a href="https://github.com/muesli/beehive">github.com/muesli/beehive</a></li>
+          </ul>
+        </section>
+        <section>
+          Ничего не мешает написать свое приложение на node вместо Zapier
+        </section>
+        <section>
+          <img src="img/bashorg.png" alt="">
+        </section>
+        <section>
+          Спасибо!
+        </section>
       </div>
     </div>
-
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
