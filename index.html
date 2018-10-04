@@ -304,8 +304,12 @@ ls -d */ | parallel 'cd {} && yq w -i pubspec.yaml dev_dependencies.mockito 4.0.
           Снижаем градус...
         </section>
         <section>
+          <img src="img/webstorm.png" alt="">
+        </section>
+        <section>
           А что если встроить IDE в консоль, а не консоль в IDE
         </section>
+
         <section>
           <p>Повседневная работа</p>
           <ul>
@@ -512,22 +516,18 @@ for d in `ls -d */` ; do (cd "$d" && git mergetool); done
           </p>
         </section>
         <section>
-          <pre><code data-trim class="docker-compose" style="font-size: .6em">
+          <pre><code data-trim class="docker-compose" style="font-size: 1em">
 version: '3.3'
 services:
    db:
      image: mysql:5.7
-     volumes:
-       - db_data:/var/lib/mysql
+     ...
      environment: ...
-
    wordpress:
-     depends_on:
-       - db
-     image: wordpress:latest
+     ...
      volumes:
        - ./themes:/var/www/html/wp-content/themes
-     environment: ...
+     ... 
 volumes:
     db_data:
           </code></pre>
