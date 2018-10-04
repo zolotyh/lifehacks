@@ -27,6 +27,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   text-align:center;
   font-weight: 400;
 }
+      ..reveal {
+        font-size: 10vh;
+      }
       .reveal li {
         margin-bottom: .3em;
       }
@@ -73,21 +76,21 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
       <div class="slides">
         <section data-transition="slide none">
           <h1>
-            Лайфхаки во фронтенд разработке
+            Лайфхаки для фронтенд-разработчиков
           </h1>
           <p>Алексей Золотых</p>
         </section>
         <section data-transition="none">
           <h1>
             <strike>
-              Лайфхаки во фронтенд разработке
+              Лайфхаки для фронтенд-разработчиков
             </strike>
           </h1>
           <p>Алексей Золотых</p>
         </section>
-        <section data-transition="none slide">
+        <section data-transition="none">
           <h1>
-            Лайфхаки
+            Лайфхаки V2
           </h1>
           <p>Алексей Золотых</p>
         </section>
@@ -100,12 +103,21 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
           </p>
         </section>
         <section>
-          Сборник мыслей
+          <h3>
+            <a href="https://bash.im/quote/436725">bash.im/quote/436725</a>
+          </h3>
+          <ul>
+              <li>smack-my-bitch-up.sh</li>
+              <li class="fragment">kumar-mudak.sh</li>
+              <li class="fragment">badun.sh</li>
+              <li class="fragment">coffe-blyat.sh</li>
+          </ul>
+        </section>
+        <section data-background="#151515">
+          <h2 style="color: orange">Выгорание</h2>
         </section>
         <section>
-          <h1>
-            0. Метрики  &mdash;  наше все
-          </h1>
+          Диагностика
         </section>
         <section>
           <p>
@@ -121,18 +133,43 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         <section>
           <img src="img/langs.svg" alt="">
         </section>
+        <section data-background="img/fuel.jpg"></section>
         <section>
-          <h1>
-            1. Слишком много информации
-          </h1>
+          <img style="height: 100%; margin: 0" src="img/1.jpg" alt="">
+        </section>
+        <section data-background="img/run.jpg">
+        </section>
+        <section data-background="img/run2.png">
         </section>
         <section>
-          X in Y
+          <p>Alfred</p>
+          <img src="img/alfred.png" alt="">
+        </section>
+        <section>
+          <p>Alfred</p>
+          <img src="img/alfred2.png" alt="">
+        </section>
+        <section>
+          <p>Spotlight</p>
+          <img src="img/spotlight.png" alt="">
+        </section>
+        <section>
+          <p>Для Windows есть Wox</p>
+          <p><a href="http://www.wox.one">www.wox.one</a></p>
+        </section>
+        <section>
+          <p>Почему я все еще пользуюсь Alfred?</p>
+        </section>
+        <section>
+          <img src="img/alfred10.png" alt="">
+        </section>
+        <section data-background-video="img/alfred.webm" data-autoplay=true>
+        </section>
+        <section>
+          Когда забыл сигнатуру функции
           <p class="fragment">
+          X in Y
           <a href="https://learnxinyminutes.com">learnxinyminutes.com</a></p>
-        </section>
-        <section>
-          <img src="img/haskell.png" alt="">
         </section>
         <section>
           <p>
@@ -142,6 +179,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 -- foldl is left-handed, foldr is right-handed
 foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
           </code></pre>
+        </section>
+        <section>
+          <img src="img/haskell.png" alt="">
+        </section>
+        <section>
+          Списки возвращаются
         </section>
         <section>
           Awesome
@@ -175,65 +218,207 @@ foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
           </ul>
         </section>
         <section>
+          <h2>
+            Проблема под другим углом
+          </h2>
+        </section>
           <section>
-            <h1>3. Затачивайте пилу</h1>
+            <img src="img/langs.svg" alt="">
+          </section>
+          <section data-background-video="img/webstorm.mov">
           </section>
           <section>
-            Мой WebStorm
-            <img src="img/ide.png" alt="">
+            80 репо скучнонудной работы
           </section>
           <section>
-            Все тоже самое в консоли
+            Написать свое решение
           </section>
           <section>
-            <img src="img/z1.svg"  width="100%" style="margin: 0" alt="">
+            <p>Пара дней работы и готово</p>
+            <img src="img/loc.png" alt="">
           </section>
           <section>
-            <img src="img/z3.svg"  width="100%" style="margin: 0" alt="">
+            Unix way
           </section>
+          <section>
+            <p>
+              Работа с репозиториями
+            </p>
+            <pre><code class="bash" data-trim>
+ls -d */ | parallel 'git -c {} pull'
+            </code></pre>
+            <p></p>
+            <pre><code class="bash" data-trim>
+ls -d */ | parallel 'cd {} && npm install'
+            </code></pre>
+            <p></p>
+            <pre><code class="bash" data-trim>
+ls -d */ | parallel 'cd {} && pub get'
+            </code></pre>
+          </section>
+          <section>
+            <p>Бампнуть версию пакета в 100 репозиторяих...</p>
+<pre><code class="bash">
+ls -d */ | parallel 'cd {} && yq w -i pubspec.yaml dev_dependencies.mockito 4.0.0'
+</code></pre>
+          <p class="fragment">Бесценно</p>
+          
         </section>
         <section>
-          Использую
-          <p class="fragment">Консоль</p>
-          <p class="fragment">IDE, когда нужно работать только с одним проектом</p>
+          <h1>GNU Parallel</h1>
+          <a href="https://www.gnu.org/software/parallel/">www.gnu.org/software/parallel/</a>
         </section>
         <section>
-          <p>Клавиатурные сочетания</p>
+          <h1>yq &mdash; yaml</h1>
+          <p>
+            <a href="https://github.com/mikefarah/yq">github.com/mikefarah/yq</a>
+          </p>
+          <div class="fragment">
+            <h1>jq &mdash; json</h1>
+            <p>
+            <a href="https://stedolan.github.io">stedolan.github.io</a>
+            </p>
+          </div>
+        </section>
+        <section>
+          &mdash; Что мне делать!? Я ничего не понял!
+        </section>
+        <section>
+          <p><a href="https://explainshell.com">explainshell.com</a></p>
+        </section>
+        <section>
+          <img src="img/gitb4.png" alt="">
+        </section>
+        <section>
+          <h1>tldr</h1>
+          <p><a href="https://tldr.sh/">tldr.sh/</a></p>
+        </section>
+        <section>
+          <img src="img/ln.svg" width="100%" style="margin: 0" alt="">
+        </section>
+        <section>
+          <p>tldr</p>
+          <pre><code>npm install -g tldr</code></pre>
+        </section>
+        <section>
+          Снижаем градус...
+        </section>
+        <section>
+          А что если встроить IDE в консоль, а не консоль в IDE
+        </section>
+        <section>
+          <p>Повседневная работа</p>
           <ul>
-            <li class="fragment">Tab</li>
-            <li class="fragment">Ctrl + R</li>
-            <li class="fragment">
+            <li class="fragment">Tab + Zsh +  OhMyZsh</li>
+            <li class="hidden">Ctrl + R</li>
+            <li class="hidden">
               Ctrl + X, Ctrl + E
               <pre><code data-trim>
   export EDITOR='subl -w'
   export VISUAL='subl -w'
               </code></pre>
             </li>
-            <li class="fragment">
+            <li class="hidden">
               Ctrl + A / Ctrl + E
             </li>
           </ul>
         </section>
         <section>
-          <p>Любимые утилиты</p>
+          <img src="img/bash4.png" alt="">
+        </section>
+        <section>
+          <img src="img/zsh4.png" alt="">
+        </section>
+        <section>
+          <img src="img/zsh5.png" alt="">
+        </section>
+        <section>
+          <div>
+            <h2>
+              Zsh
+            </h2>
+            <a href="http://www.zsh.org/">http://www.zsh.org/</a>
+          </div>
+          <div class="fragment">
+            <h2>
+              OhMyZsh
+            </h2>
+            <p>
+              <a href="https://github.com/robbyrussell/oh-my-zsh">github.com/robbyrussell/oh-my-zsh</a>
+            </p>
+          </div>
+        </section>
+        <section>
+          <p>Повседневная работа</p>
           <ul>
-            <li class="fragment">ohmyzsh</li>
-            <li class="fragment">z</li>
-            <li class="fragment">fzf</li>
-            <li class="fragment">gnu parallel</li>
+            <li>Tab + Zsh + OhMyZsh</li>
+            <li class="fragment">Ctrl + R</li>
+            <li class="hidden">
+              Ctrl + X, Ctrl + E
+              <pre><code data-trim>
+  export EDITOR='subl -w'
+  export VISUAL='subl -w'
+              </code></pre>
+            </li>
+            <li class="hidden">
+              Ctrl + L
+            </li>
+          </ul>
+        </section>
+        <section >
+          <video data-autoplay src="img/ctrlr.mov"></video>
+        </section>
+        <section>
+          <p>Повседневная работа</p>
+          <ul>
+            <li>Tab + Zsh + OhMyZsh</li>
+            <li>Ctrl + R</li>
+            <li class="fragment">
+              Ctrl + X, Ctrl + E
+              <pre class="hidden"><code data-trim>
+  export EDITOR='subl -w'
+  export VISUAL='subl -w'
+              </code></pre>
+            </li>
+            <li class="hidden">
+              Ctrl + L
+            </li>
+          </ul>
+        </section>
+        <section data-background-video="img/editor.mov">
+        </section>
+        <section>
+          <p>Повседневная работа</p>
+          <ul>
+            <li>Tab + Zsh + OhMyZsh</li>
+            <li>Ctrl + R</li>
+            <li>
+              Ctrl + X, Ctrl + E
+              <pre class="fragment"><code data-trim>
+  export EDITOR='subl -w'
+  export VISUAL='subl -w'
+              </code></pre>
+            </li>
+            <li class="fragment">
+              Ctrl + L
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>Любимое</p>
+          <ul>
+            <li class="fragment">
+              z <a href="github.com/rupa/z">github.com/rupa/z</a>
+            </li>
+            <li class="fragment">fzf <a href="https://github.com/junegunn/fzf">github.com/junegunn/fzf</a></li>
             <li class="fragment">git</li>
           </ul>
         </section>
         <section>
-          <h1>ohmyzsh</h1>
-          <img src="img/ohmyzsh.png" alt="">
+          <p>FZF + z</p>
         </section>
         <section>
-          <p>z</p>
-          <p><a href="https://github.com/rupa/z">github.com/rupa/z</a></p>
-        </section>
-        <section>
-          <p>FZF &mdash; нечеткий поиск в Unix стиле</p>
+          <video data-autoplay src="img/fzf.mov"></video>
         </section>
         <section>
           <p>
@@ -244,21 +429,7 @@ foldr (\x y -&gt; 2*x + y) 4 [1,2,3] -- 16
           </p>
         </section>
         <section>
-          <p>
-            Gnu Parallel &mdash; паралельность из коробки
-          </p>
-        </section>
-        <section>
-          <pre><code class="bash" data-trim>
-# Сделать git pull всем подпапкам
-for d in `ls -d */` ; do (cd "$d" && git pull); done
-          </code></pre>
-        </section>
-        <section>
-          <pre><code class="bash" data-trim>
-          # Сделать git pull всем подпапкам
-          ls -d */ | parallel 'git -C {} pull'
-</code></pre>
+          Соединяем десктопные приложения
         </section>
         <section>
           <img src="img/devtool.png" alt="">
@@ -336,51 +507,6 @@ for d in `ls -d */` ; do (cd "$d" && git mergetool); done
           <pre><code class="bash" data-trim>git-standup -d 3 | pbcopy</code></pre>
         </section>
         <section>
-          <p><a href="https://explainshell.com">explainshell.com</a></p>
-        </section>
-        <section>
-          <img src="img/gitb4.png" alt="">
-        </section>
-        <section>
-          <img src="img/ln.svg" width="100%" style="margin: 0" alt="">
-        </section>
-        <section>
-          <p>tldr</p>
-          <pre><code>npm install -g tldr</code></pre>
-        </section>
-        <section>
-          <h1>4. Поиск занимает слишком много времени</h1>
-        </section>
-        <section>
-          <img style="height: 100%; margin: 0" src="img/1.jpg" alt="">
-        </section>
-        <section data-background="img/run.jpg">
-        </section>
-        <section data-background="img/run2.png">
-        </section>
-        <section>
-          <p>Alfred</p>
-          <img src="img/alfred.png" alt="">
-        </section>
-        <section>
-          <p>Alfred</p>
-          <img src="img/alfred2.png" alt="">
-        </section>
-        <section>
-          <p>Spotlight</p>
-          <img src="img/spotlight.png" alt="">
-        </section>
-        <section>
-          <p>Почему я все еще пользуюсь Alfred?</p>
-        </section>
-        <section>
-          <p>Для Windows есть Wox</p>
-          <p><a href="http://www.wox.one">www.wox.one</a></p>
-        </section>
-        <section>
-          <h1>5. Стандарты и нестандартные решения</h1>
-        </section>
-        <section>
           <p>
             Docker
           </p>
@@ -425,7 +551,9 @@ volumes:
           </ul>
         </section>
         <section>
-          <h1>5. Построй свой процесс</h1>
+          <h2>
+            А что если взять еще шире?
+          </h2>
         </section>
         <section>
           <p>
@@ -469,9 +597,6 @@ volumes:
           </ul>
         </section>
         <section>
-          Ничего не мешает написать свое приложение на node вместо Zapier
-        </section>
-        <section>
           <img src="img/bashorg.png" alt="">
         </section>
         <section>
@@ -487,6 +612,7 @@ volumes:
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+        transition: 'fade',
         controls: true,
         width: 1280,
         height: 1024,
